@@ -24,7 +24,7 @@
             <TextBlock Text="ZipsZap" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0,384,128"/>
             <Button x:Name="buttonContatos" Content="Contatos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-13,100,0,-13" Width="187" BorderBrush="#FF146307" Click="buttonContatos_Click"/>
             <Button x:Name="buttonGrupos" Content="Grupos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="148,100,0,-13" Width="183" BorderBrush="#FF146307" Background="#FF1A8508"/>
-            <Button x:Name="buttonConversas" Content="Conversas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="306,100,-15,-13" Width="189" BorderBrush="{StaticResource PhoneRadioCheckBoxBrush}"/>
+            <Button x:Name="buttonConversas" Content="Conversas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="306,100,-15,-13" Width="189" BorderBrush="{StaticResource PhoneRadioCheckBoxBrush}" Click="buttonConversas_Click"/>
             <Button x:Name="buttonAtualizar" Content="Atualizar"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="350,-12,-12,0" Width="142" Background="{x:Null}" Click="buttonAtualizar_Click" />
             <Button x:Name="buttonCriarGrupo" Content="Criar"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="238,-12,0,0" Width="142" Background="{x:Null}" Click="buttonCriarGrupo_Click" />
 

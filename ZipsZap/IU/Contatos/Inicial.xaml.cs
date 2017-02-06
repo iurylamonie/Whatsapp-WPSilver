@@ -47,5 +47,10 @@ namespace IU.Contatos
         {
             NavigationService.Navigate(new Uri("/Grupos/Inicial.xaml", UriKind.Relative));
         }
+
+        private void buttonConversas_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Conversa.xaml", UriKind.Relative));
+        }
     }
 }

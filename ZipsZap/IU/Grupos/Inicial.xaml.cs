@@ -56,5 +56,10 @@ namespace IU.Grupos
                 NavigationService.Navigate(new Uri("/Grupos/EnviarMsg.xaml", UriKind.Relative));
             }
         }
+
+        private void buttonConversas_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Conversa.xaml", UriKind.Relative));
+        }
     }
 }
