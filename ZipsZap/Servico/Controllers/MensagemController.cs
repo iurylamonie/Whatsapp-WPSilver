@@ -27,7 +27,7 @@ namespace Servico.Controllers
                 "<wp:Toast>" +
                         "<wp:Text1>" + msg.Remetente + "</wp:Text1>" +
                         "<wp:Text2>" + msg.Conteudo + "</wp:Text2>" +
-                        "<wp:Param>/Usuario/LerMsg.xaml?NavigatedFrom=Toast Notification</wp:Param>" +
+                        "<wp:Param>/Conversa.xaml?Rem=" + msg.Remetente + "&amp;Cont=" + msg.Conteudo +"</wp:Param>" +
                    "</wp:Toast> " +
                 "</wp:Notification>";
 
