@@ -1,0 +1,47 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="IU.Contatos.Inicial"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent" Margin="0,0,0,609">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+
+        <Grid x:Name="TitlePanel" Grid.Row="0" Background="#FF146307" Grid.RowSpan="2">
+            <TextBlock Text="ZipsZap" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0,384,128"/>
+            <Button x:Name="buttonContatos" Content="Contatos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-13,100,0,-13" Width="187" BorderBrush="#FF146307" Background="#FF1A8508"/>
+            <Button x:Name="buttonGrupos" Content="Grupos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="148,100,0,-13" Width="183" BorderBrush="#FF146307" Background="{x:Null}" Click="buttonGrupos_Click"/>
+            <Button x:Name="buttonConversas" Content="Conversas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="306,100,-15,-13" Width="189" BorderBrush="{StaticResource PhoneRadioCheckBoxBrush}"/>
+            <Button x:Name="buttonAtualizar" Content="Atualizar"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="350,-12,-12,0" Width="142" Background="{x:Null}" Click="buttonAtualizar_Click"/>
+            <Button x:Name="buttonMeuDados" Content="Alterar"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="238,-12,0,0" Width="142" Background="{x:Null}" Click="buttonMeuDados_Click"/>
+
+        </Grid>
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="1,162,-1,-605" Background="White">
+            <ListBox x:Name="listBoxContatos" Margin="0,36,0,60" Foreground="Black" DoubleTap="listBoxContatos_DoubleTap">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Nome}" FontSize="16" FontFamily="Georgia" FontWeight="Bold" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,40 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="IU.Grupos.Meus.AdicionarMembro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0"  Grid.RowSpan="2" Background="#FF146307">
+            <TextBlock Text="ZipsZap" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,158,0,-606" Background="#FFCFCFCF">
+            <TextBox x:Name="textBoxNome" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="460" Margin="10,145,0,0" BorderBrush="#FFE2DDDD"/>
+            <Button x:Name="buttonAdicionar" Content="Adicionar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="246,419,0,0" Width="167" Background="#FF1D8F0A" BorderBrush="#FFD6D6D6" Click="buttonAdicionar_Click" />
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nome do Usuário" VerticalAlignment="Top" Margin="23,129,0,0"/>
+            <TextBlock x:Name="textBlockAviso" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Usuário Não Existe!" VerticalAlignment="Top" Foreground="#FFFB0B0B" FontWeight="Bold" FontSize="34" Visibility="Collapsed" Margin="83,222,0,0" Width="321"/>
+            <Button x:Name="buttonCancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="68,419,0,0" Width="167" Background="#FF1D8F0A" BorderBrush="#FFD6D6D6" Click="buttonCancelar_Click" />
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

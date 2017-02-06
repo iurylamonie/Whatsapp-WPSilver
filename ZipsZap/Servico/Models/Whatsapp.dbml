@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ZipsZap" Class="WhatsappDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=IURY-NOTEBOOK\ILDEVELOPER;Initial Catalog=ZipsZap;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ZipsZapConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Grupo" Member="Grupos">
+    <Type Name="Grupo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="idAdm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Grupo_Membro" Member="Membros" AccessModifier="Internal" ThisKey="id" OtherKey="grupo_id" Type="Membro" />
+      <Association Name="Usuario_Grupo" Member="Usuario" ThisKey="idAdm" OtherKey="id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuario" Member="Usuarios">
+    <Type Name="Usuario">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="uri" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Usuario_Grupo" Member="Grupos" AccessModifier="Internal" ThisKey="id" OtherKey="idAdm" Type="Grupo" />
+      <Association Name="Usuario_Membro" Member="Membros" AccessModifier="Internal" ThisKey="id" OtherKey="usuario_id" Type="Membro" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Membro" Member="Membros">
+    <Type Name="Membro">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usuario_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="grupo_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Grupo_Membro" Member="Grupo" ThisKey="grupo_id" OtherKey="id" Type="Grupo" IsForeignKey="true" />
+      <Association Name="Usuario_Membro" Member="Usuario" ThisKey="usuario_id" OtherKey="id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
